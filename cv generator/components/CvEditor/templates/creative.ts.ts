@@ -1,0 +1,33 @@
+export const creative = {
+  id: 'creative',
+  name: 'Creative / Portfolio',
+  pagesMax: 2,
+  accentColor: 'user_pick_6',
+  photo: true,
+  photoSizeMm: { width: 25, height: 25 },
+  columns: 2 as const,
+  leftColumnWidthMm: 60,
+  columnGapMm: 4,
+  sections: [
+    { id: 'photo_and_contact_left_col', type: 'composite', position: 'left_column', components: ['photo', 'contact_details', 'skills_bars', 'languages'] },
+    { id: 'name_title_right_col', type: 'header', position: 'right_column', components: ['name', 'title_line'] },
+    { id: 'profile_right', type: 'text_block', maxLines: 5, label: 'About Me', position: 'right_column' },
+    {
+      id: 'experience_right',
+      type: 'repeatable_list',
+      label: 'Experience',
+      maxItems: 4,
+      itemSchema: ['jobTitle', 'company', 'dates', 'bullets'],
+      maxBulletsPerItem: 3,
+      position: 'right_column',
+    },
+    {
+      id: 'education_right',
+      type: 'repeatable_list',
+      label: 'Education',
+      maxItems: 3,
+      itemSchema: ['degree', 'university', 'year'],
+      position: 'right_column',
+    },
+  ],
+};

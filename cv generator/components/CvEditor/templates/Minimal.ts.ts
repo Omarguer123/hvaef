@@ -1,0 +1,31 @@
+export const modernMinimal = {
+  id: 'modern_minimal',
+  name: 'Modern Minimal',
+  pagesMax: 2,
+  accentColor: '#2B5B84',
+  photo: false,
+  columns: 2 as const,
+  leftColumnWidthMm: 40,
+  columnGapMm: 4,
+  sections: [
+    { id: 'header', type: 'header', heightMm: 30, components: ['name', 'title_line', 'contact_icons'] },
+    { id: 'summary', type: 'text_block', maxLines: 6, label: 'Profile' },
+    {
+      id: 'experience',
+      type: 'repeatable_list',
+      label: 'Experience',
+      maxItems: 5,
+      itemSchema: ['jobTitle', 'company', 'dates', 'bullets'],
+      maxBulletsPerItem: 3,
+    },
+    { id: 'skills_left_col', type: 'tag_grid', label: 'Expertise', maxTags: 8, columns: 1, position: 'left_column' },
+    { id: 'languages_left_col', type: 'tag_list', label: 'Languages', position: 'left_column' },
+    {
+      id: 'education',
+      type: 'repeatable_list',
+      label: 'Education',
+      maxItems: 3,
+      itemSchema: ['degree', 'university', 'year'],
+    },
+  ],
+};

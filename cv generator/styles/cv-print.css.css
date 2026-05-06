@@ -1,0 +1,54 @@
+@page {
+  size: A4;
+  margin: 20mm;
+}
+
+html, body {
+  width: 210mm;
+  min-height: 297mm;
+  font-family: 'Inter', sans-serif;
+  font-size: 10.5pt;
+  line-height: 14pt;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-page {
+  width: 170mm;
+  margin: 0 auto;
+  padding: 20mm;
+}
+
+.cv-name {
+  font-size: 22pt;
+  font-weight: 700;
+  margin-bottom: 6mm;
+}
+
+.section-title {
+  font-size: 12pt;
+  font-weight: 600;
+  border-bottom: 0.5pt solid #333;
+  padding-bottom: 2mm;
+  margin-bottom: 2mm;
+  text-transform: uppercase;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 40mm 4mm 126mm;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  padding: 1mm 3mm;
+  border-radius: 2mm;
+  font-size: 9.5pt;
+}
+
+@media print {
+  .no-print { display: none !important; }
+}
